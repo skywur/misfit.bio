@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+
+@font-face {
+    font-family: 'meow';
+    src: url(fonts/THE_JACATRA.ttf);
+  }
+
+.wrapper {
+    background: linear-gradient(45deg, rgb(14, 14, 14), rgb(36, 36, 36));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+@media screen and (max-width: 425px) {
+    #loader {
+        display: none;
+    }
+  }
+
+#loader {
+    z-index: 4;
+    position: absolute;
+    background: linear-gradient(45deg, rgb(14, 14, 14), rgb(36, 36, 36));
+    width: 100%;
+    height: 100%;
+}
+
+#loader h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    animation: loaderIntro 1s linear forwards;
+    color: #fff;
+    text-shadow: 0 0 7px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 50px #fff;
+    cursor: default;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+@keyframes loaderIntro {
+    0% {
+        opacity: 0%;
+        filter: blur(10px);
+    }
+    50% {
+        opacity: 100%;
+        text-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 25px #fff, 0 0 40px #fff;
+        filter: blur(0px);
+    }
+    100% {
+        text-shadow: 0 0 7px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 50px #fff;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+#main {
+    position: absolute;
+    background: rgb(6, 6, 6);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.main {
+    animation: main 1s forwards;
+}
+
+@keyframes main {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.content {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.text {
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    cursor: default;
+}
+
+.links {
+    justify-content: center;
+    align-items: center;
+    display: block;
+    text-decoration: none;
+}
+.links a svg {
+    width: 30px;
+    fill: white;
+    margin: 5px;
+    transition: 0.3s;
+}
+#tiktok:hover {
+    fill: #000000 !important;
+}
+#instagram:hover {
+    fill: #E4405F !important;
+}
+#discord:hover {
+    fill: #5865F2 !important;
+}
+#roblox:hover {
+    fill: red !important;
+}
+
+.content h1 {
+    text-align: center;
+    color: white;
+    font-family: 'meow', monospace;
+    background: transparent;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 2px 2px 2px rgba(206,89,55,0);
+    font-size: 72px;
+    padding: 1vw;
+    user-select: none;
+    transition: 250ms ease-in-out;
+    mix-blend-mode: difference;
+    filter: saturate(50%);
+
+}
+.content h1:hover {
+    letter-spacing: 10px;
+    font-size: 80px;
+}
+
+.content h2 {
+    text-align: center;
+    color: gray;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    background: transparent;
+    text-shadow: 0 0 5px #6b6b6b, 0 0 10px #6b6b6b, 0 0 15px #6b6b6b, 2px 2px 2px rgba(206,89,55,0);
+    font-size: 20px;
+    margin: -.5vw;
+}
+
+.content #quotes {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Source Code Pro', monospace;
+    transform: translateY(-1vw);
+    user-select: none;
+    filter: brightness(75%);
+}
+
+#main #bg {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
