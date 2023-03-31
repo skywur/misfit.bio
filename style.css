@@ -16,11 +16,6 @@
     z-index: 1;
 }
 
-@media screen and (max-width: 425px) {
-    #loader {
-        display: none;
-    }
-  }
 
 #loader {
     z-index: 4;
@@ -105,6 +100,8 @@
     justify-content: center;
     align-items: center;
     display: block;
+}
+.links a:hover {
     text-decoration: none;
 }
 .links a svg {
@@ -114,16 +111,16 @@
     transition: 0.3s;
 }
 #tiktok:hover {
-    fill: #000000 !important;
+    fill: #000000;
 }
 #instagram:hover {
-    fill: #E4405F !important;
+    fill: #E4405F;
 }
 #discord:hover {
-    fill: #5865F2 !important;
+    fill: #5865F2;
 }
 #roblox:hover {
-    fill: red !important;
+    fill: red;
 }
 
 .content h1 {
